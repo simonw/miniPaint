@@ -45,6 +45,73 @@ To embed this app on another page, use the following HTML code:
 ## Build instructions
 See [Wiki > Build instructions](https://github.com/viliusle/miniPaint/wiki/Build-instructions)
 
+## Testing
+
+miniPaint includes comprehensive tests using Jest for unit tests and Playwright for end-to-end tests.
+
+### Install Dependencies
+```bash
+npm install
+```
+
+### Run Unit Tests
+```bash
+npm test                 # Run all unit tests
+npm run test:watch       # Run tests in watch mode
+npm run test:coverage    # Run tests with coverage report
+```
+
+### Run E2E Tests
+```bash
+npm run test:e2e         # Run Playwright E2E tests
+npm run test:e2e:ui      # Run E2E tests with interactive UI
+```
+
+### Run All Tests
+```bash
+npm run test:all         # Run both unit and E2E tests
+```
+
+### Test Structure
+- `tests/unit/` - Unit tests for core functionality (helpers, config, app modules)
+- `tests/e2e/` - End-to-end browser tests (page load, menu navigation, canvas interaction, etc.)
+
+### Testing React Version
+```bash
+npm run test:e2e:react   # Run E2E tests against React version
+```
+
+## React Version
+
+miniPaint includes a full React rewrite alongside the original vanilla JavaScript implementation. Both versions pass the same test suite.
+
+### Running the React Version
+```bash
+npm run dev:react        # Build React bundle
+npm run server:react     # Start React dev server (opens at http://localhost:8081/index-react.html)
+```
+
+### Building for Production
+```bash
+npm run build:react      # Build React production bundle
+npm run build:all        # Build both original and React bundles
+```
+
+### React Project Structure
+```
+src/react/
+├── main.jsx             # React entry point
+├── components/
+│   ├── App.jsx          # Main application component
+│   ├── MainMenu.jsx     # Menu navigation
+│   ├── ToolsSidebar.jsx # Drawing tools
+│   ├── Canvas.jsx       # Main canvas component
+│   ├── Sidebar.jsx      # Right sidebar (colors, layers, etc.)
+│   └── Submenu.jsx      # Top submenu bar
+└── contexts/
+    └── AppContext.jsx   # React context for state management
+```
+
 ## Wiki
 See [Wiki](https://github.com/viliusle/miniPaint/wiki)
 
