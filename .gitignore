@@ -22,4 +22,5 @@ playwright-report/
 # React build artifacts (generated via npm run build:react)
 dist/bundle-react.js
 dist/bundle-react.js.map
+dist/bundle-react.js.LICENSE.txt
 
